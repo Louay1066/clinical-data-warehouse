@@ -1,0 +1,20 @@
+# Ignore data files
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Ignore Airflow logs
+logs/*
+!logs/.gitkeep
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore ML Models and scalers (Optional, but good practice since they are generated)
+ml/models/*
+!ml/models/.gitkeep
+
+# Ignore Synthea Jar
+synthea-with-dependencies.jar
