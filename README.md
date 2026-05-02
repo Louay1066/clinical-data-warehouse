@@ -23,8 +23,7 @@
 
 ## Architecture Overview
 
-<!-- Replace with your architecture diagram -->
-> 📷 `docs/architecture.png` — Add your architecture diagram here.
+![Architecture Diagram](src/Diagram.png)
 
 ---
 
@@ -100,8 +99,7 @@ Extract  →  Train ML Model  →  Score Patients  →  Data Quality Check  → 
 
 Each task runs sequentially. If the **Data Quality Check** detects a fatal anomaly, the DAG fails and no data is loaded.
 
-<!-- Replace with your Airflow DAG screenshot -->
-> 📷 `docs/airflow_dag.png` — Add your Airflow DAG graph view screenshot here.
+![Airflow DAG](src/AirFlow.png)
 
 ---
 
@@ -148,8 +146,7 @@ Username: airflow
 Password: airflow
 ```
 
-<!-- Replace with your Power BI screenshot -->
-> 📷 `docs/powerbi_dashboard.png` — Add your Power BI dashboard screenshot here.
+![Power BI Dashboard](src/Dashboard.png)
 
 ---
 
@@ -185,23 +182,6 @@ Runs as a dedicated Airflow task after scoring. The pipeline **intentionally fai
 
 ---
 
-## Known Limitations
-
-- Synthea data does not capture longitudinal lab trends — the ML model uses encounter-level features only.
-- The pipeline is single-node and is not designed for distributed processing of large patient populations.
-- The Power BI report is a reference template — visuals will need tuning for real data volumes.
-
----
-
-## Roadmap
-
-- [ ] **Soon** — Expand to additional chronic disease registries (hypertension, CKD)
-- [ ] **Soon** — Add `dbt` for in-warehouse transformations and model documentation
-- [ ] **Later** — Migrate orchestration to Prefect or Dagster
-- [ ] **Later** — Replace logistic regression with a gradient boosting readmission model
-- [ ] **Later** — Add FHIR R4 ingestion layer alongside the CSV pipeline
-
----
 
 ## Contributing
 
